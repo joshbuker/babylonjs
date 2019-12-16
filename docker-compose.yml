@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  web:
+    build: .
+    image: app/babylonjs
+    command: bin/rails s
+    env_file: .env
+    ports:
+      - '3000:3000'
+      - '3035:3035'
+    depends_on:
+      - db
+    volumes:
+      - .:/babylonjs
+  db:
+    image: postgres:latest
+    ports:
+      - '5432:5432'
