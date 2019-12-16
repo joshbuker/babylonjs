@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  <% if ENV['BABYLONJS_DATABASE_USERNAME'].present? %>
+  username: <%= ENV['BABYLONJS_DATABASE_USERNAME'] %>
+  <% end %>
+  <% if ENV['BABYLONJS_DATABASE_HOST'].present? %>
+  host: <%= ENV['BABYLONJS_DATABASE_HOST'] %>
+  <% end %>
+
+development:
+  <<: *default
+  database: babylonjs_development
+
+test:
+  <<: *default
+  database: babylonjs_test
+
+production:
+  <<: *default
+  database: babylonjs_production
+  username: babylonjs
+  password: <%= ENV['BABYLONJS_DATABASE_PASSWORD'] %>
