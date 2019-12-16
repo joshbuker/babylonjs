@@ -1,6 +1,6 @@
 # Babylonjs
 
-TODO: Description goes here.
+![](README.png?raw=true)
 
 ## Running locally bare-metal
 
