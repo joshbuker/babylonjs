@@ -1,6 +1,15 @@
 # Babylonjs
 
+Test application with two goals:
+
+1. Test [athix/rails-template](https://github.com/athix/rails-template) in
+preparation for Aeon Splice using Rails.
+2. See if BabylonJS, VueJS, and Rails can be combined to create a game engine.
+
 ![](README.png?raw=true)
+
+Successful on both accounts, and Aeon Splice is now being worked on in a private
+repository.
 
 ## Running locally bare-metal
 
